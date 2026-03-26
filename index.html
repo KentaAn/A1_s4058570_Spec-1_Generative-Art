@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Biological Vault - SDG 14</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+</head>
+
+<body>
+
+    <header class="hero-section" id="art-header">
+        <div id="p5-container"></div>
+        <button id="fullscreen-btn">[ ENTER FULLSCREEN ]</button>
+        <div class="scroll-indicator">↓ SCROLL TO READ ↓</div>
+    </header>
+
+    <main class="editorial-layout">
+
+        <aside class="project-meta">
+            <h1>THE BIOLOGICAL VAULT</h1>
+            <div class="meta-info">
+                <p><strong>COURSE:</strong> COMM2754 - Digital Media Specialisation 1</p>
+                <p><strong>TIME:</strong> Vietnam Semester 1 2026</p>
+                <p><strong>GROUP NAME:</strong> Vinfast</p>
+                <p><strong>MEMBERS:</strong> Vo Dinh Duc An, Nguyen Tuan Kiet, Le Minh Nhat, Nguyen Tran Quang Huy</p>
+                <br>
+                <p><strong>THEME:</strong> SDG 14 - Life Below Water</p>
+                <p><strong>QUOTE:</strong> "We possess ocean wealth, and this precious asset brings benefits to us all.
+                    So why don't we know how to preserve it?" - Thu Minh</p>
+                <p><strong>CONCEPT:</strong> Abstract DNA (Data Flow) & Corruption</p>
+                <p><strong>AUTHOR:</strong> Vo Dinh Duc An</p>
+            </div>
+        </aside>
+
+        <article class="project-text">
+            <h2>01. CONCEPTUAL FRAMEWORK</h2>
+            <p>
+                This generative piece abstracts the coral reef into a "Biological Database". Based on research
+                identifying reefs not only as the "medicine cabinet of the 21st century" but also as a multi-billion
+                dollar economic asset, the healthy reef is visualized as an organic, flowing stream of genetic data and
+                value symbols.
+            </p>
+
+            <h2>02. THE DESTRUCTIVE TOUCH</h2>
+            <p>
+                The user's cursor acts not merely as physical interference, but as a "Data Corruptor". When touched, the
+                harmonious streams violently glitch, turning into dead, grayscale binary codes. This delivers a profound
+                conceptual impact: destroying a coral reef is erasing an irreplaceable archive of humanity's future.
+            </p>
+
+            <h2>03. SDG & QUOTE CONNECTION - CALL TO ACTION</h2>
+            <p>
+                This poignant question posed by Thu Minh strikes at the heart of the paradox addressed by <strong>SDG
+                    14: Life Below Water</strong>. Humanity relies heavily on the ocean's "wealth"—an invaluable
+                biological, pharmaceutical, and economic database stored within fragile ecosystems like coral reefs.
+                Yet, despite being the primary beneficiaries of this natural asset, our collective actions continuously
+                drive its degradation through pollution, climate change, and negligence.
+            </p>
+            <p>
+                In the <em>Biological Vault</em> generative artwork, this contradiction is simulated perfectly: the
+                moment the user interacts with the harmonious DNA streams, they become a "Data Corruptor," violently
+                glitching and erasing the very data that sustains life. To answer Thu Minh's challenge, we must bridge
+                the gap between simply extracting the ocean's value and taking accountability for its survival. We must
+                transition from passive consumers to active stewards of marine life. The call to action is urgent: we
+                must acknowledge the fragility of this ecological codebase and halt our destructive interference.
+                <em>Don't touch coral reefs</em>; protect the biological vault before this irreplaceable wealth is
+                deleted forever.
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>RMIT University Vietnam, Saigon South Campus, School of Communication and Design, Digital Media Program</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('fullscreen-btn');
+            const container = document.getElementById('art-header');
+
+            btn.addEventListener('click', () => {
+                if (!document.fullscreenElement) {
+
+                    if (container.requestFullscreen) {
+                        container.requestFullscreen();
+                    } else if (container.webkitRequestFullscreen) {
+                        container.webkitRequestFullscreen();
+                    }
+                    btn.innerText = "[ EXIT FULLSCREEN ]";
+                } else {
+
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    }
+                    btn.innerText = "[ ENTER FULLSCREEN ]";
+                }
+            });
+
+
+            document.addEventListener('fullscreenchange', () => {
+                if (!document.fullscreenElement) {
+                    btn.innerText = "[ ENTER FULLSCREEN ]";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
