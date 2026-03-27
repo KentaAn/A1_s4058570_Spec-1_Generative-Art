@@ -24,5 +24,5 @@ No additional dependencies or plug-in installations are required (the p5.js libr
 The Biological Vault is licensed under the GPL 3.0 license. See the `LICENSE` file in the root directory for more details.
 
 ## Credits
-Created by [Vo Dinh Duc An] for Digital Media program at RMIT.
+Created by [Vo Dinh Duc An] for Digital Media Specialisation 1 - a Digital Media program at RMIT.
 Contact: [voan201005@gmail.com]
